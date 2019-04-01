@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/tPostDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minggu, 20 Maret 2018"
+        android:textSize="12sp"
+        android:gravity="end"/>
+
+    <TextView
+        android:id="@+id/tName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ahmad"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"/>
+
+    <TextView
+        android:id="@+id/tChatting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aku seorang programmer"
+        android:textSize="15sp"
+        android:layout_marginTop="5sp"/>
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="35sp"
+        android:background="@color/colorPrimary"
+        android:text="OK"
+        android:textColor="#fff"
+        android:layout_gravity="end"
+        android:layout_marginTop="30sp"/>
+
+</LinearLayout>

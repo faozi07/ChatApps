@@ -11,13 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.Random;
 
 public class CreateAccount extends AppCompatActivity {
     Button btnCreate;
-    EditText eNama, ePhone;
+    EditText eNama;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,6 @@ public class CreateAccount extends AppCompatActivity {
 
         btnCreate = findViewById(R.id.btnCreate);
         eNama = findViewById(R.id.eName);
-        ePhone = findViewById(R.id.ePhone);
 
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,15 +41,13 @@ public class CreateAccount extends AppCompatActivity {
                 }
                 
                 String name = eNama.getText().toString();
-                String phone = ePhone.getText().toString();
-                if (name.equals("") || phone.equals("")) {
+                if (name.equals("")) {
                     Toast.makeText(CreateAccount.this, "Isi data dengan lengkap", Toast.LENGTH_LONG).show();
                 } else {
                     SharedPreferences spUser = getSharedPreferences(StaticVars.SP_USER, MODE_PRIVATE);
                     SharedPreferences.Editor createEditor = spUser.edit();
                     createEditor.putString(StaticVars.SP_USER_ID, String.valueOf(new Random().nextInt()));
                     createEditor.putString(StaticVars.SP_USER_NAME, name);
-                    createEditor.putString(StaticVars.SP_USER_PHONE, phone);
                     createEditor.apply();
                     
                     if (!spUser.getString(StaticVars.SP_USER_NAME,"").equals("")) {
@@ -63,8 +58,4 @@ public class CreateAccount extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-    }
 }

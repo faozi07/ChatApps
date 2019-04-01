@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rlMainChat"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
+    android:orientation="vertical"
     tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tTheDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31 Desember 2019"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:background="@drawable/bg_rounded_float"
+        android:layout_gravity="center"
+        android:padding="5sp"
+        android:layout_marginBottom="15sp"/>
 
     <LinearLayout
         android:id="@+id/llChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10sp"
-        android:background="@color/colorAccent">
-        <TextView
-            android:id="@+id/tPostDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10 Januari 2019"
-            android:textSize="10sp"
-            android:textColor="#fff"/>
+        android:padding="5sp"
+        android:background="@drawable/bg_rounded_chat_red">
         <TextView
             android:id="@+id/tName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ahmad Mustakim"
             android:textSize="15sp"
-            android:textColor="#fff"/>
+            android:textColor="#fff"
+            android:textStyle="bold"/>
         <TextView
             android:id="@+id/tChatting"
             android:layout_width="wrap_content"
@@ -36,5 +44,13 @@
             android:text="nama saya Ahmad"
             android:textSize="15sp"
             android:textColor="#fff"/>
+        <TextView
+            android:id="@+id/tPostDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:40"
+            android:textSize="10sp"
+            android:textColor="#fff"
+            android:layout_gravity="end"/>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
